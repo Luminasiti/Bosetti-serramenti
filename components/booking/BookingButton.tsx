@@ -3,7 +3,7 @@
 import type { ReactNode } from "react";
 import { ArrowRight } from "lucide-react";
 import { buttonClasses, type ButtonSize, type ButtonVariant } from "@/components/ui/Button";
-import { useBooking } from "./BookingProvider";
+import { useConcierge } from "@/components/concierge/ConciergeContext";
 
 interface BookingButtonProps {
   need?: string;
@@ -13,7 +13,7 @@ interface BookingButtonProps {
   children?: ReactNode;
 }
 
-/** Opens the booking wizard in a modal, optionally with a product pre-selected. */
+/** Every "Richiedi Preventivo" CTA: opens the booking chat, pre-selected on the product when given. */
 export function BookingButton({
   need,
   variant = "primary",
@@ -21,13 +21,13 @@ export function BookingButton({
   className = "",
   children = "Prenota il sopralluogo gratuito",
 }: BookingButtonProps) {
-  const { openBooking } = useBooking();
+  const { openConcierge } = useConcierge();
 
   if (variant === "link") {
     return (
       <button
         type="button"
-        onClick={() => openBooking(need)}
+        onClick={() => openConcierge(need)}
         className={`group inline-flex items-center gap-1.5 font-semibold text-ink underline decoration-key decoration-2 underline-offset-[6px] hover:text-key cursor-pointer ${className}`}
       >
         {children}
@@ -39,7 +39,7 @@ export function BookingButton({
   return (
     <button
       type="button"
-      onClick={() => openBooking(need)}
+      onClick={() => openConcierge(need)}
       className={buttonClasses(variant, size, `group ${className}`)}
     >
       <span>{children}</span>

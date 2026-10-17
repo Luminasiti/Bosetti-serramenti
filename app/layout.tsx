@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Archivo, Inter } from "next/font/google";
 import { companyData } from "@/data/company";
+import { ConciergeProvider } from "@/components/concierge/ConciergeContext";
 import "./globals.css";
 
 // Variable Archivo with the width axis: headings are set slightly wide, like the logo lettering.
@@ -37,6 +38,8 @@ export const viewport: Viewport = {
   themeColor: "#F6F4F1",
   width: "device-width",
   initialScale: 1,
+  // The on-screen keyboard resizes the page, so the chat input stays visible.
+  interactiveWidget: "resizes-content",
 };
 
 const jsonLd = {
@@ -90,7 +93,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        {children}
+        <ConciergeProvider>{children}</ConciergeProvider>
       </body>
     </html>
   );

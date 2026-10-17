@@ -1,4 +1,3 @@
-import { BookingProvider } from "@/components/booking/BookingProvider";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { MobileStickyBar } from "@/components/layout/MobileStickyBar";
@@ -13,7 +12,7 @@ import { ContactsSection } from "@/components/home/ContactsSection";
 
 export default function HomePage() {
   return (
-    <BookingProvider>
+    <>
       <Header />
       <main>
         <HeroSection />
@@ -27,6 +26,6 @@ export default function HomePage() {
       </main>
       <Footer />
       <MobileStickyBar />
-    </BookingProvider>
+    </>
   );
 }
