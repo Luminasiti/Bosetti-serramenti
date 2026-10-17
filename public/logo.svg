@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 234" fill="none">
+  <!-- Key Bow (Left vertical rounded oval in #A8282A) -->
+  <rect x="36" y="34" width="84" height="166" rx="42" stroke="#A8282A" stroke-width="18" />
+  <!-- Key Shaft (Horizontal bar between BOSETTI and SERRAMENTI) -->
+  <path d="M120 114H572" stroke="#A8282A" stroke-width="15" stroke-linecap="round" />
+  <!-- Key Bit / Teeth (Right side notched block) -->
+  <path d="M502 114H560V168C560 170 558 171 556 171H548V158H541V171H532V158H525V171H516V158H509V171H506C504 171 502 170 502 168V114Z" fill="#A8282A" />
+  <!-- BOSETTI Text -->
+  <text x="142" y="96" fill="#1F1F1F" font-family="Archivo, Arial, sans-serif" font-weight="800" font-size="90" letter-spacing="1">BOSETTI</text>
+  <!-- SERRAMENTI Text -->
+  <text x="145" y="164" fill="#1F1F1F" font-family="Archivo, Arial, sans-serif" font-weight="700" font-size="44" letter-spacing="2.5">SERRAMENTI</text>
+</svg>
